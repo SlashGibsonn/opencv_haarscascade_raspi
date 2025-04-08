@@ -38,7 +38,7 @@ else:
                         face = gray[y:y + h, x:x + w]
                         resized_face = cv2.resize(face, (100, 100))
                         known_faces.append(resized_face)
-                        known_names.append(os.path.splitext(file_name)[0])
+                        known_names.append(os.path.splitext(file_name)[0].split('_')[0])
                         print(f"Wajah ditemukan dan dimuat: {file_name}")
                 except Exception as e:
                     print(f"Error: {e}")
